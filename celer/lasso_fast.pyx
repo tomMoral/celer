@@ -333,7 +333,7 @@ def celer(
             tol_inner = tol
 
         if verbose:
-            print("Solving subproblem with %d constraints" % len(C))
+            print("Solving subproblem with %d constraints (%d remaining)" % (len(C), n_features - n_screened))
         # calling inner solver which will modify w and R inplace
         inner_solver(
             is_sparse,
